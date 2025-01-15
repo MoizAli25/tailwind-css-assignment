@@ -1,4 +1,3 @@
-// pages/index.js
 "use client";
 
 import Head from "next/head";
@@ -18,16 +17,12 @@ export default function Home() {
         />
       </Head>
 
-
       {/* Contact Section */}
-      <section
-        id="contact"
-        className="bg-gray-100 py-16 px-8"
-      >
+      <section id="contact" className="bg-gray-100 py-16 px-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-center text-4xl font-bold mb-4">CONTACT</h1>
           <p className="text-center text-lg mb-8">
-            Let's get in touch. Send us a message:
+            Let&apos;s get in touch. Send us a message:
           </p>
           <div className="space-y-6">
             <p className="flex items-center text-lg">
