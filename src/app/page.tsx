@@ -1,101 +1,124 @@
-import Image from "next/image";
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Head>
+        <title>Adventure Travels | Home</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      
+
+      {/* Carousel */}
+      <div className="relative">
+        <div className="carousel-item active relative w-full h-96 bg-cover bg-center" style={{ backgroundImage: "url('/landscape-tropical-vacation-palm-summer.jpg')" }}>
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
+            <h1 className="text-white text-4xl md:text-5xl font-bold">Maldives</h1>
+            <p className="text-gray-300 mt-2">We had such a great time in Maldives!</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </div>
+
+      {/* Main Section */}
+      <section className="container mx-auto my-12 text-center">
+        <h2 className="text-3xl font-bold mb-6">Welcome to Adventure Travels</h2>
+        <p className="text-lg text-gray-700 mb-8">
+          We offer thrilling travel experiences around the world. Whether you're looking to trek through mountains, dive in tropical waters, or explore deserts, we have something for everyone.
+        </p>
+
+        {/* Customer Testimonials Section */}
+        <h3 className="text-2xl font-semibold mb-4">Customer Testimonials</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-4 border rounded shadow-lg">
+            <h4 className="text-xl font-bold text-blue-500">Emily R.</h4>
+            <p className="mt-2">"The mountain trek was a life-changing experience. Highly recommend Adventure Travels!"</p>
+          </div>
+          <div className="p-4 border rounded shadow-lg">
+            <h4 className="text-xl font-bold text-blue-500">James M.</h4>
+            <p className="mt-2">"Scuba diving in the Maldives was breathtaking. Adventure Travels made it seamless and unforgettable."</p>
+          </div>
+          <div className="p-4 border rounded shadow-lg">
+            <h4 className="text-xl font-bold text-blue-500">Sarah K.</h4>
+            <p className="mt-2">"The desert safari was thrilling! Perfectly organized and such a unique experience."</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="bg-red-800 text-white py-12" id="services">
+        <div className="container mx-auto text-center p-5 rounded-xl max-w-screen-lg">
+          <h2 className="text-3xl font-bold mb-6">Our Services</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-2">Mountain Treks</h3>
+              <p>Experience breathtaking views and thrilling hikes in the world’s most stunning mountain ranges.</p>
+            </div>
+            <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-2">Scuba Diving</h3>
+              <p>Dive into crystal-clear waters and explore vibrant marine life in tropical destinations.</p>
+            </div>
+            <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-2">Desert Safari</h3>
+              <p>Embark on thrilling desert safaris and discover the beauty of expansive sand dunes.</p>
+            </div>
+            <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-2">Wildlife Safari</h3>
+              <p>Witness majestic wildlife up close in their natural habitats with expert guides.</p>
+            </div>
+            <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold mb-2">Custom Packages</h3>
+              <p>Design your dream adventure with customizable travel packages tailored to your preferences.</p>
+            </div>
+          </div>
+          <a href="/components/services" className="mt-8 inline-block bg-red-600 text-white py-2 px-6 rounded hover:bg-red-500">Discover More</a>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="container mx-auto my-12" id="about">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold">About Us</h2>
+          <p className="text-lg text-gray-700">Founded in 2010, Adventure Travels has been delivering extraordinary travel experiences for over a decade.</p>
+        </div>
+        <div className="md:flex md:items-center">
+          <div className="md:w-1/2">
+            <p className="text-lg text-gray-700 mb-4">
+              Adventure Travels was established by passionate explorers committed to sharing their love for adventure and nature. Our goal is to create unique journeys that connect travelers with breathtaking landscapes and cultures worldwide.
+            </p>
+            <ul className="list-disc list-inside">
+              <li><strong>Over 700 Successful Trips:</strong> We’ve organized hundreds of unforgettable trips, creating cherished memories for travelers.</li>
+              <li><strong>Safety & Quality:</strong> We prioritize your safety and comfort while delivering the highest quality of service.</li>
+              <li><strong>Expert Guides:</strong> Our team consists of expert guides passionate about helping you experience the wonders of the world.</li>
+              <li><strong>Customizable Trips:</strong> We offer tailor-made packages to match your travel preferences and needs.</li>
+            </ul>
+          </div>
+          <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+            <img src="/travel-concept-with-landmarks.jpg" alt="Adventure Image" className="rounded shadow-lg" />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="bg-gray-100 py-12" id="contact">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
+          <p className="text-lg text-gray-700 mb-6">Let's get in touch. Send us a message:</p>
+          <form className="max-w-xl mx-auto space-y-4">
+            <input type="text" placeholder="Name" className="w-full border p-2 rounded" required />
+            <input type="email" placeholder="Email" className="w-full border p-2 rounded" required />
+            <input type="text" placeholder="Subject" className="w-full border p-2 rounded" required />
+            <textarea placeholder="Message" className="w-full border p-2 rounded" rows={4} required></textarea>
+            <button type="submit" className="bg-black text-white py-2 px-4 rounded hover:bg-gray-800">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-4 text-center">
+        <p>&copy; 2024 Adventure Travels</p>
       </footer>
-    </div>
+    </>
   );
 }
